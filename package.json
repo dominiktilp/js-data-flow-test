@@ -1,0 +1,40 @@
+{
+  "name": "ng-flux-reactive-test",
+  "version": "1.0.0",
+  "description": "Angular app for testing redux, rx.js and other modern methods",
+  "main": "app.js",
+  "scripts": {
+    "start-client": "node client.server.js",
+    "build-client": "$(npm bin)/webpack --progress --colors"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dominiktilp/ng-flux-reactive-test.git"
+  },
+  "author": "Dominik Tilp",
+  "license": "SEE LICENSE IN BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/dominiktilp/ng-flux-reactive-test/issues"
+  },
+  "homepage": "https://github.com/dominiktilp/ng-flux-reactive-test#readme",
+  "dependencies": {
+    "angular": "^1.4.8",
+    "bower": "^1.7.1",
+    "express": "^4.13.3"
+  },
+  "devDependencies": {
+    "babel-core": "^6.3.21",
+    "babel-loader": "^6.2.0",
+    "babel-preset-es2015": "^6.3.13",
+    "css-loader": "^0.23.0",
+    "extract-text-webpack-plugin": "^0.9.1",
+    "file-loader": "^0.8.5",
+    "html-loader": "^0.4.0",
+    "node-sass": "^3.4.2",
+    "raw-loader": "^0.5.1",
+    "sass-loader": "^3.1.2",
+    "style-loader": "^0.13.0",
+    "webpack": "^1.12.9",
+    "webpack-dev-server": "^1.14.0"
+  }
+}
