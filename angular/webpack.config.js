@@ -1,7 +1,8 @@
+var path = require('path');
 var webpack = require('webpack');
 
 module.exports = {
-  context: __dirname + "/client",
+  context: path.resolve(__dirname, "./src/"),
   entry: {
     app: ['webpack/hot/dev-server', "./app.es6.js"],
     vendors: "./vendors.es6.js"
@@ -9,8 +10,8 @@ module.exports = {
 
   output: {
     filename: "app.js",
-    path: __dirname + "/build/client",
-    publicPath:  __dirname + '/build/client'
+    path: path.resolve(__dirname, "./build"),
+    publicPath:  path.resolve(__dirname, './build')
   },
 
   module: {

@@ -1,5 +1,5 @@
 # exclude build and dist dirs
-/build
-/dist
+/**/build
+/**/dist
 # exclude node modules dir
 /node_modules

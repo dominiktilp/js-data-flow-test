@@ -7,7 +7,7 @@ var WebpackDevServer = require('webpack-dev-server');
 config.plugins.push(new webpack.HotModuleReplacementPlugin())
 
 var server = new WebpackDevServer(compiler, {
-  contentBase: './build/client',
+  contentBase: './build',
   hot: true,
   inline: true,
   watch: true,

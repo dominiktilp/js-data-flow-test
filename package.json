@@ -1,28 +1,26 @@
 {
-  "name": "ng-flux-reactive-test",
+  "name": "js-data-flow-test",
   "version": "1.0.0",
-  "description": "Angular app for testing redux, rx.js and other modern methods",
-  "main": "app.js",
+  "description": "Project for testing modern frontend framework angular, angular2 and react with emphasis on data flow and storing application state.",
+  "main": "",
   "scripts": {
-    "start-client": "node client.server.js",
-    "build-client": "$(npm bin)/webpack --progress --colors"
+    "angular": "node angular/webpack.server.js",
+    "angular-build": "$(npm bin)/webpack --config angular/webpack.config.js --progress --colors"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dominiktilp/ng-flux-reactive-test.git"
+    "url": "git+https://github.com/dominiktilp/js-data-flow-test.git"
   },
   "author": "Dominik Tilp",
   "license": "SEE LICENSE IN BSD-2-Clause",
   "bugs": {
-    "url": "https://github.com/dominiktilp/ng-flux-reactive-test/issues"
+    "url": "https://github.com/dominiktilp/js-data-flow-test/issues"
   },
-  "homepage": "https://github.com/dominiktilp/ng-flux-reactive-test#readme",
-  "dependencies": {
+  "homepage": "https://github.com/dominiktilp/js-data-flow-test#readme",
+  "devDependencies": {
     "angular": "^1.4.8",
     "bower": "^1.7.1",
-    "express": "^4.13.3"
-  },
-  "devDependencies": {
+    "express": "^4.13.3",
     "babel-core": "^6.3.21",
     "babel-loader": "^6.2.0",
     "babel-preset-es2015": "^6.3.13",
