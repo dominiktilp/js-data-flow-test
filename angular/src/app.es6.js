@@ -9,13 +9,20 @@ import {BaseListTestController, BaseListTestTemplate} from './routes/BaseListTes
 import './app.scss';
 import '!!file?name=index.html!./index.html';
 
+if (module.hot) {
+  module.hot.accept();
+
+}
+
 export default angular
   .module('app', ['ngRoute', 'Base'])
-  .config(routeConfig)
+  .config(config)
   .run(run)
 
 
-function routeConfig($routeProvider) {
+function config($routeProvider, $httpProvider) {
+  $httpProvider.defaults.useXDomain = true;
+  
   $routeProvider
     .when('/',{
       template: BaseListTestTemplate,
@@ -25,7 +32,7 @@ function routeConfig($routeProvider) {
     .otherwise({ redirectTo:'/' });
 }
 
-routeConfig.$inject = ['$routeProvider'];
+config.$inject = ['$routeProvider', '$httpProvider'];
 
 function run() {
 

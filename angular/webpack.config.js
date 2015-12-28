@@ -4,7 +4,7 @@ var webpack = require('webpack');
 module.exports = {
   context: path.resolve(__dirname, "./src/"),
   entry: {
-    app: ['webpack/hot/dev-server', "./app.es6.js"],
+    app: ['webpack-dev-server/client?http://localhost:8881', 'webpack/hot/only-dev-server', "./app.es6.js"],
     vendors: "./vendors.es6.js"
   },
 
