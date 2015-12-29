@@ -8,7 +8,7 @@ class ListItemHeadController {
   }
 
   edit() {
-    this.operations.updateItem(this.item);
+    this.operations.edit();
   }
 }
 

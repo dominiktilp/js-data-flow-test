@@ -1,5 +1,3 @@
-'use strict';
-
 import ListItemHeadController from './ListItemHeadController.es6.js';
 import ListItemHeadTemplate from './ListItemHead.html';
 

@@ -1,3 +1,4 @@
 <li class="list-item">
-  <list-item-head item="vm.item" operations="{updateItem: vm.operations.updateItem, deleteItem: vm.operations.deleteItem}"></list-item-head>
+  <list-item-edit ng-if="vm.isEdited" item="vm.item" operations="{updateItem: vm.operations.updateItem, createItem: vm.operations.createItem}"></list-item-edit>
+  <list-item-head ng-if="!vm.isEdited" item="vm.item" operations="{updateItem: vm.operations.updateItem, deleteItem: vm.operations.deleteItem, edit: vm.edit}"></list-item-head>
 </li>

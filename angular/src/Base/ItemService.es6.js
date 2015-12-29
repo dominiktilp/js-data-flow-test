@@ -18,13 +18,13 @@ class ItemService {
   }
 
   update(item) {
-    return this.$http.put(`http://localhost:8888/api/items/${item._id}`, item).then((resp) => {
+    return this.$http.put(`http://localhost:8888/api/items/${item._id}`, {item: item}).then((resp) => {
       return resp.data.item;
     })
   }
 
   delete(item) {
-    return this.$http.delete(`http://localhost:8888/api/items/${item._id}`, item).then((resp) => {
+    return this.$http.delete(`http://localhost:8888/api/items/${item._id}`, {item: item}).then((resp) => {
       return resp.data.item;
     })
   }
