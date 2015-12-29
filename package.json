@@ -6,7 +6,7 @@
   "scripts": {
     "angular": "node angular/webpack.server.js",
     "angular-build": "$(npm bin)/webpack --config angular/webpack.config.js --progress --colors",
-    "backend": "$(npm bin)/nodemon --exec node backend/index.js"
+    "backend": "$(npm bin)/nodemon --watch backend --exec node backend/index.js"
   },
   "repository": {
     "type": "git",
@@ -31,11 +31,11 @@
     "extract-text-webpack-plugin": "^0.9.1",
     "file-loader": "^0.8.5",
     "html-loader": "^0.4.0",
+    "nedb": "^1.5.1",
     "node-sass": "^3.4.2",
     "nodemon": "^1.8.1",
     "raw-loader": "^0.5.1",
     "sass-loader": "^3.1.2",
-    "sqlite3": "^3.1.1",
     "style-loader": "^0.13.0",
     "webpack": "^1.12.9",
     "webpack-dev-server": "^1.14.0"

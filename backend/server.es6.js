@@ -4,6 +4,8 @@ import cors from 'cors';
 import bodyParser from 'body-parser';
 
 import hello from './hello.es6.js';
+import itemsRouter from './items.es6.js';
+import typesRouter from './types.es6.js';
 
 let port = process.env.PORT || 8888;
 
@@ -11,20 +13,22 @@ let app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-let router = express.Router();
+function supportCrossOriginScript(req, res, next) {
+  res.status(200);
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Content-Type");
+  res.header("Access-Control-Allow-Methods", "PUT, GET, POST, DELETE, OPTIONS");
+  next();
+}
+app.use(supportCrossOriginScript);
+app.options('*', supportCrossOriginScript);
 
+let router = express.Router();
 router.get('/', hello);
 app.use('/api', router);
 
-function supportCrossOriginScript(req, res, next) {
-    res.status(200);
-    res.header("Access-Control-Allow-Origin", "*");
-    res.header("Access-Control-Allow-Headers", "Content-Type");
-    next();
-}
-
-app.use('/api', supportCrossOriginScript);
-app.options('*', supportCrossOriginScript);
+app.use('/api/items', itemsRouter);
+app.use('/api/types', typesRouter);
 
 
 

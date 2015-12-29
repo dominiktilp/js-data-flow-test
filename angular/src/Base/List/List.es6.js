@@ -8,13 +8,14 @@ class List {
     this.restrict = 'E';
     this.replace = true;
     this.controller = ListItemController;
-    this.controllerAs = "vm"
+    this.controllerAs = "vm";
     this.template = ListItemTemplate;
-    this.scope = {};
+    this.scope = true;
+    this.bindToController = {
+    }
   }
 
   link(scope, element, attr, ctr) {
-
   }
 
   static directiveFactory() {

@@ -3,14 +3,16 @@
 var BaseListTestTemplate = require('./BaseListTest.html');
 
 class BaseListTestController {
-  constructor($http) {
+  constructor($http, itemService) {
     this.title = "ListTest with base directives";
-
+        
   }
+
+
 
 }
 
-BaseListTestController.$inject = ['$http'];
+BaseListTestController.$inject = ['$http', 'itemService'];
 
 
 export {BaseListTestTemplate, BaseListTestController};

@@ -1,12 +1,8 @@
-'use strict';
-
 class ListItemController {
-  constructor() {
-
+  constructor() {    
   }
 }
 
 ListItemController.$inject = [];
-
 
 export default ListItemController;

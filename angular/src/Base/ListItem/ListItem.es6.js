@@ -12,7 +12,8 @@ class ListItem {
     this.template = ListItemTemplate;
     this.scope = {};
     this.bindToController = {
-      item: "="
+      item: "=",
+      operations: "="
     }
   }
 
