@@ -4,7 +4,7 @@ var BaseListTestTemplate = require('./BaseListTest.html');
 
 class BaseListTestController {
   constructor($http) {
-    this.title = "ListTest with base directives";    
+    this.title = "ListTest with base directives";
 
   }
 

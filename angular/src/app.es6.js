@@ -22,7 +22,7 @@ export default angular
 
 function config($routeProvider, $httpProvider) {
   $httpProvider.defaults.useXDomain = true;
-  
+
   $routeProvider
     .when('/',{
       template: BaseListTestTemplate,
