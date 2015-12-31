@@ -12,12 +12,9 @@ class AddTypeController {
     return this.defer.promise;
   }
 
-  save() {    
-    this.typeService.create(this.type).then((type) => {
-      this.show = false;
-      this.defer.resolve(type);
-    });
-
+  save() {
+    this.show = false;
+    this.defer.resolve(this.type);
   }
 
   cancel() {

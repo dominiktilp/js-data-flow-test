@@ -4,10 +4,13 @@ class AddTypeService {
     this.$rootScope = $rootScope;
   }
 
-  openModal() {
+  openModal(callback) {
     this.defer = this.$q.defer();
     this.$rootScope.$broadcast("openAddTypeModal", {defer: this.defer});
-    return this.defer.promise;
+
+    return this.defer.promise.then((data)=>{
+      return callback(data);      
+    });
   }
 
 }

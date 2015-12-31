@@ -2,5 +2,5 @@
   <list-item-edit ng-if="vm.isEdited" item="vm.item" operations="{updateItem: vm.operations.updateItem, createItem: vm.operations.createItem}"></list-item-edit>
   <list-item-head ng-if="!vm.isEdited" item="vm.item" operations="{updateItem: vm.operations.updateItem, deleteItem: vm.operations.deleteItem, edit: vm.edit}"></list-item-head>
   <list-item-type ng-if="!vm.typeIsEdited" type="vm.item.type" operations="{editType: vm.editType}"></list-item-type>
-  <list-item-type-select ng-if="vm.typeIsEdited" item="vm.item" types="vm.types" operations="{updateItem: vm.operations.updateItem}"></list-item-type-select>
+  <list-item-type-select ng-if="vm.typeIsEdited" item="vm.item" types="vm.types" operations="{updateItem: vm.operations.updateItem, addType: vm.operations.addType}"></list-item-type-select>
 </li>

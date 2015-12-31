@@ -33,11 +33,12 @@ a {
   min-height: 90vh;
   padding: 1rem 2rem;
   box-sizing: border-box;
+  overflow-y: auto;
   ul.list {
     padding: 0;
     margin: 0;
     text-indent: 0;
-    clear: both;
+    display: flex;
     &:after {
       visibility: hidden;
       display: block;
@@ -47,7 +48,7 @@ a {
       height: 0;
     }
     li.list-item {
-      float: left;
+      flex: 0 0 auto;
       width: 13rem;
       min-height: 10rem;
       background: #BAEFFF;

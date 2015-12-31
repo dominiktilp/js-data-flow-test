@@ -10,7 +10,8 @@ class AddType {
     this.template = AddTypeTemplate;
     this.scope = true;
     this.bindToController = {
-      operations: "="
+      operations: "=",
+      types: "="
     }
   }
 

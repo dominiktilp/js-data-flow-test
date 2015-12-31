@@ -7,14 +7,13 @@ class ListItemTypeSelectController {
     this.item.type_id = type._id;
     this.operations.updateItem(this.item).then(
       (item)=>{
-        console.log("updateitem",item);
-        this.item = item;
+
       }
     );
   }
 
   createNewType() {
-    this.addTypeService.openModal().then(
+    this.addTypeService.openModal(this.operations.addType).then(
       (data) => {
         this.selectType(data);
       }

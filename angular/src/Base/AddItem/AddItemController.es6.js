@@ -9,7 +9,7 @@ class AddItemController {
   }
 
   save() {
-    this.operations.addItem(this.item).then(()=>{
+    this.operations.addItem(this.item).then((data)=>{
       this.item = {};
       this.adding = false;
     });
