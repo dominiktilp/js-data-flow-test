@@ -1,7 +1,14 @@
-{"name":"Test 2","description":"","type_id":null,"_id":"1"}
-{"_id":"2","name":"Druhý","type_id":"3"}
-{"_id":"3","name":"Třetí","type_id":"1"}
-{"name":"","description":"","type_id":null,"_id":"2"}
-{"name":"","description":"","type_id":null,"_id":"2"}
-{"name":"test aaaa","description":"","type_id":null,"_id":"2"}
-{"name":"Test 2fdsaf","description":"","type_id":null,"_id":"1"}
+{"_id":"1","name":"První","type_id":"1","createdAt":{"$$date":1451591934430},"updatedAt":{"$$date":1451591934430}}
+{"_id":"2","name":"Druhý","type_id":"3","createdAt":{"$$date":1451591934432},"updatedAt":{"$$date":1451591934432}}
+{"_id":"3","name":"Třetí","type_id":"1","createdAt":{"$$date":1451591934432},"updatedAt":{"$$date":1451591934432}}
+{"name":"Třetí","description":"","type_id":"4","_id":"3","updatedAt":{"$$date":1451591944832}}
+{"name":"Druhý","description":"","type_id":"4","_id":"2","updatedAt":{"$$date":1451591954438}}
+{"name":"test","description":"","type_id":null,"_id":"2p76l25sLOhd16ZQ","createdAt":{"$$date":1451592036027},"updatedAt":{"$$date":1451592036027}}
+{"name":"test","description":"","type_id":"4","_id":"2p76l25sLOhd16ZQ","updatedAt":{"$$date":1451592039255}}
+{"name":"test","description":"","type_id":"1","_id":"2p76l25sLOhd16ZQ","updatedAt":{"$$date":1451592045478}}
+{"name":"První","description":"","type_id":"1","_id":"1","updatedAt":{"$$date":1451592051929}}
+{"name":"Druhý","description":"","type_id":"4","_id":"2","updatedAt":{"$$date":1451592104328}}
+{"name":"test","description":"","type_id":"1","_id":"2p76l25sLOhd16ZQ","updatedAt":{"$$date":1451592110047}}
+{"name":"Třetí","description":"","type_id":"3","_id":"3","updatedAt":{"$$date":1451592114286}}
+{"name":"dsadsad","description":"","type_id":null,"_id":"01czW6TFdcBbgebC","createdAt":{"$$date":1451592193794},"updatedAt":{"$$date":1451592193794}}
+{"name":"dsadsad","description":"","type_id":"vmDdO7jt0xGVkivD","_id":"01czW6TFdcBbgebC","updatedAt":{"$$date":1451592243063}}

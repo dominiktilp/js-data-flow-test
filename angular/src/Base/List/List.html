@@ -1,4 +1,4 @@
 <ul class="list">
-  <list-item ng-repeat="item in vm.items" operations="vm.operations" item="item"></list-item>
-  <li class="add-item" ng-click="vm.addItem()">Add Item</li>
+  <list-item ng-repeat="item in vm.items" operations="vm.operations" item="item" types="vm.types"></list-item>
+  <add-item operations="{addItem: vm.operations.addItem}"></add-item>
 </ul>

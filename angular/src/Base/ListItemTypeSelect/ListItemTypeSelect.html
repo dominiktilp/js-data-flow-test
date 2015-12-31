@@ -1,0 +1,11 @@
+<div>
+  <h5>Select type</h5>
+  <ul>
+    <li ng-repeat="type in vm.types" ng-class="{'selected': vm.item.type_id==type._id}">
+      <a ng-click="vm.selectType(type)">
+        {{type.name}}
+      </a>
+    </li>
+  </ul>
+  <a ng-click="vm.createNewType()">create new type</a>
+</div>

@@ -3,3 +3,6 @@
 /**/dist
 # exclude node modules dir
 /node_modules
+# exclude db files
+/backend/items.db
+/backend/types.db

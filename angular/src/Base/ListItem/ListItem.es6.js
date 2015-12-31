@@ -13,12 +13,13 @@ class ListItem {
     this.scope = {};
     this.bindToController = {
       item: "=",
-      operations: "="
+      operations: "=",
+      types: "="
     }
   }
 
-  link(scope, element, attr, ctr) {
-
+  link(scope, element, attr, ctrl) {
+    
   }
 
   static directiveFactory() {

@@ -1,4 +1,5 @@
-{"_id":"1","name":"A"}
-{"_id":"2","name":"B"}
-{"_id":"3","name":"C"}
-{"_id":"4","name":"D"}
+{"_id":"1","name":"A","createdAt":{"$$date":1451591934428},"updatedAt":{"$$date":1451591934428}}
+{"_id":"2","name":"B","createdAt":{"$$date":1451591934430},"updatedAt":{"$$date":1451591934430}}
+{"_id":"3","name":"C","createdAt":{"$$date":1451591934432},"updatedAt":{"$$date":1451591934432}}
+{"_id":"4","name":"D","createdAt":{"$$date":1451591934433},"updatedAt":{"$$date":1451591934433}}
+{"name":"aaaa","_id":"vmDdO7jt0xGVkivD","createdAt":{"$$date":1451592243009},"updatedAt":{"$$date":1451592243009}}

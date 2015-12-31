@@ -1,5 +1,3 @@
-'use strict';
-
 import ListItemController from './ListController.es6.js';
 import ListItemTemplate from './List.html';
 

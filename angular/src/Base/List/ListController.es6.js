@@ -1,7 +1,10 @@
 class ListController {
-  constructor(itemService) {
+  constructor(itemService, typeService) {
     this.itemService = itemService;
+    this.typeService = typeService;
+    this.items = [];
     this.loadItems();
+
 
     this.operations = {
       loadItems: this.loadItems.bind(this),
@@ -12,32 +15,49 @@ class ListController {
   }
 
   loadItems() {
-    this.itemService.getAll().then((data) => {
+    return this.itemService.getAll().then((data) => {
       this.items = data;
+      this.loadTypes();
+      return data;
+    })
+  }
+
+  loadTypes() {
+    return this.typeService.getAll().then((data) => {
+      this.types = data;
+      this.items = this.items.map((it)=>{
+        var filtered = this.types.filter((ty) => {return ty._id == it.type_id});
+        it.type = filtered.length > 0 ? filtered[0] : undefined;
+        return it;
+      });
+      return data;
     })
   }
 
   addItem(item) {
-    this.itemService.create(item).then((data) => {
+    return this.itemService.create(item).then((data) => {
       this.loadItems();
+      return data;
     })
   }
 
   updateItem(item) {
-    this.itemService.update(item).then((data) => {
+    return this.itemService.update(item).then((data) => {
       this.loadItems();
+      return data;
     })
   }
 
   deleteItem(item) {
-    this.itemService.delete(item).then((data) => {
+    return this.itemService.delete(item).then((data) => {
       this.loadItems();
+      return data;
     })
   }
 
 }
 
-ListController.$inject = ['itemService'];
+ListController.$inject = ['itemService', 'typeService'];
 
 
 export default ListController;

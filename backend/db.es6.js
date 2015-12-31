@@ -4,8 +4,8 @@ import path from 'path';
 
 let db = {};
 var exists = fs.existsSync(path.resolve(__dirname, "./items.db")) && fs.existsSync(path.resolve(__dirname, "./types.db"));
-db.items = new Datastore({ filename: path.resolve(__dirname, "./items.db"), autoload: true });
-db.types = new Datastore({ filename: path.resolve(__dirname, "./types.db"), autoload: true });
+db.items = new Datastore({ filename: path.resolve(__dirname, "./items.db"), autoload: true, timestampData: true });
+db.types = new Datastore({ filename: path.resolve(__dirname, "./types.db"), autoload: true, timestampData: true });
 
 if (!exists) {
   console.log("INIT DB;")

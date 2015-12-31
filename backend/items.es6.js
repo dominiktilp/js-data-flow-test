@@ -5,7 +5,7 @@ let itemsRouter = express.Router();
 
 itemsRouter.get("/",
   (req, res, next) => {
-    db.items.find({}, (err, docs) => {
+    db.items.find({}).sort({ createdAt: 1 }).exec((err, docs) => {
       res.json({items: docs});
     });
   }
@@ -36,8 +36,7 @@ itemsRouter.post("/",
 itemsRouter.put("/:id",
   (req, res, next) => {
     let item = Object.assign({name: "", description: "", type_id: null}, req.body.item);
-    db.items.update({_id: req.params.id}, item, {}, (err, num, doc)=>{
-      console.log(num);
+    db.items.update({_id: req.params.id}, item, {}, (err, num, doc)=>{      
       if(err !== null) {
         res.status(422).json({item: item, errors: [err]});
       }
@@ -54,7 +53,6 @@ itemsRouter.delete("/:id",
   (req, res, next) => {
     let item = Object.assign({name: "", description: "", type_id: null}, req.body.item);
     db.items.remove({_id: req.params.id}, {}, (err, num, doc)=>{
-      console.log(num);
       if(err !== null) {
         res.status(422).json({item: item, errors: [err]});
       }

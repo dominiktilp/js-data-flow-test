@@ -1,0 +1,15 @@
+<div>
+  <h5>Type</h5>
+  <div class="type" ng-if="vm.type._id">
+    <div>
+      <span class="id">{{vm.type._id}}</span>
+      <span class="name">{{vm.type.name}}</span>
+    </div>
+    <div class="actions">
+      <a ng-click="vm.edit()">edit</a>
+    </div>
+  </div>
+  <div class="type" ng-if="!vm.type._id">
+    <a ng-click="vm.edit()">select type</a>
+  </div>
+</div>
